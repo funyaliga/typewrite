@@ -49,4 +49,4 @@ class typewrite {
     
 }
 
-// export default typewrite
+export default typewrite
