@@ -9,7 +9,7 @@
 const DEFAULTS = {
     ele: '.typewrite',
     words: '',
-    speed: 150
+    speed: 200
 }
 
 class typewrite {
@@ -21,15 +21,15 @@ class typewrite {
         this.flag = true // 最后闪烁标记标记
         this.dom = document.querySelectorAll(this.o.ele)
         this.timer = null;
-        if(this.len > 0 && this.dom.length){
+        if(this.dom.length){
             this.star()
         }
     }
 
     html(doms, content) {
-        for(var i in doms) {
-            doms[i].innerHTML = content
-        }
+        doms.forEach(dom => {
+            dom.innerHTML = content
+        })
     }
 
     star() {
@@ -49,4 +49,4 @@ class typewrite {
     
 }
 
-export default typewrite
+// export default typewrite
